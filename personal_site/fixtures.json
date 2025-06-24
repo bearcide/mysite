@@ -1,0 +1,32 @@
+[
+  {
+    "model": "points.section",
+    "pk": 1,
+    "fields": {
+      "title": "Introduction",
+      "description": "Getting started guide",
+      "tags": ["django", "beginner"]
+    }
+  },
+  {
+    "model": "points.point",
+    "pk": 1,
+    "fields": {
+      "section": 1,
+      "title": "Installation",
+      "description": "How to install",
+      "start_date": "Apr. 2020",
+      "end_date": "Dec. 2020",
+      "tags": ["setup"]
+    }
+  },
+  {
+    "model": "points.bulletpoint",
+    "pk": 1,
+    "fields": {
+      "point": 1,
+      "sentence": "Download the package",
+      "tags": ["download"]
+    }
+  }
+]

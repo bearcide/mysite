@@ -18,8 +18,8 @@ class Point(models.Model):
 
     title = models.CharField(max_length=500)
     description = models.TextField()
-    start_date = models.DateField()
-    end_date = models.DateField(blank=True)
+    start_date = models.CharField(max_length=100)
+    end_date = models.CharField(max_length=100)
     tags = TaggableManager(blank=True)
 
     def __str__(self):
