@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emilio García Riba - Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <style>
+        :root {
+            --mygreen: #344e41;
+            --mygreen2: #3a5a40;
+            --mygreen3: #588157;
+            --mygreen4: #a3b18a;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        .header-bg {
+            background-color: var(--mygreen);
+            color: white;
+            padding: 3rem 0;
+        }
+        .section-title {
+            color: var(--mygreen2);
+            border-bottom: 2px solid var(--mygreen4);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            font-variant: small-caps;
+            font-weight: bold;
+        }
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border: 5px solid var(--mygreen4);
+        }
+        .card {
+            border: none;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-bottom: 1.5rem;
+        }
+        .text-green {
+            color: var(--mygreen2) !important;
+        }
+        .badge-custom {
+            background-color: var(--mygreen3);
+            font-weight: normal;
+        }
+        a.custom-link {
+            color: white;
+            text-decoration: none;
+        }
+        a.custom-link:hover {
+            color: var(--mygreen4);
+        }
+        
+        /* Schedule Table Styling */
+        .schedule-table th {
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            color: #555;
+            text-align: center;
+        }
+        .schedule-table td {
+            width: 16%;
+            padding: 3px !important;
+            vertical-align: top;
+            border-color: #e0e0e0;
+        }
+        .time-col {
+            width: 8%;
+            font-size: 0.75rem;
+            color: #777;
+            text-align: right;
+            padding-right: 10px !important;
+            border: none !important;
+            vertical-align: middle;
+        }
+        .event-block {
+            display: flex;
+            flex-direction: column;
+            border-radius: 4px;
+            padding: 6px 8px;
+            font-size: 0.8rem;
+            line-height: 1.2;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .event-title { font-weight: bold; margin-bottom: 2px; }
+        .event-time { font-size: 0.7rem; opacity: 0.9; }
+
+        /* Calendar Colors Based on your Image */
+        .bg-alcon { background-color: #029be5; color: white; }
+        .bg-grafica { background-color: #e67c73; color: white; }
+        .bg-micro { background-color: #0b8043; color: white; }
+        .bg-negocios { background-color: #f6bf26; color: #333; }
+        .bg-tic { background-color: #d50000; color: white; }
+        .bg-internet { background-color: #7986cb; color: white; }
+        .bg-redes { background-color: #b31260; color: white; }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="header-bg text-center text-md-start">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-3 text-center mb-4 mb-md-0">
+                    <!-- Replace 'profile.jpg' with your actual photo file name -->
+                    <img src="profile.jpg" alt="Emilio García Riba" class="rounded-circle profile-img shadow">
+                </div>
+                <div class="col-md-9">
+                    <h1 class="display-4 fw-bold">Emilio García Riba</h1>
+                    <h4 class="mb-3" style="color: var(--mygreen4);">Computer Engineering Student & DevSecOps Intern</h4>
+                    <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-md-start mb-3">
+                        <span><i class="bi bi-telephone-fill me-2"></i>+52 55 3075 4885</span>
+                        <span><i class="bi bi-envelope-fill me-2"></i><a href="mailto:garcia.riba.emilio@gmail.com" class="custom-link">garcia.riba.emilio@gmail.com</a></span>
+                        <span><i class="bi bi-linkedin me-2"></i><a href="https://www.linkedin.com/in/emiliogarciariba/" target="_blank" class="custom-link">LinkedIn</a></span>
+                        <span><i class="bi bi-github me-2"></i><a href="https://github.com/bearcide" target="_blank" class="custom-link">GitHub</a></span>
+                    </div>
+                    <!-- Download CV Button -->
+                    <div class="d-flex justify-content-center justify-content-md-start">
+                        <a href="cv_english.pdf" download class="btn btn-light fw-bold shadow-sm px-4 py-2" style="color: var(--mygreen2);">
+                            <i class="bi bi-file-earmark-pdf-fill me-2"></i> Download CV
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container my-5">
+        <div class="row">
+            
+            <!-- Left Column: Summary, Skills, Projects -->
+            <div class="col-lg-4">
+                
+                <!-- Summary -->
+                <section class="mb-5">
+                    <h2 class="section-title">Summary</h2>
+                    <p class="text-justify">
+                        Computer Engineering student in my <strong>ninth semester</strong> with practical experience in software development through academic, personal, and professional projects. I have worked directly with clients, understanding and transforming their needs into effective solutions. I'm currently working at Alcon doing a part-time 1-year internship. My duties include managing UAM, customization, bug solving, and optimization of Atlassian and Tricentis tools during the CST timezone.
+                    </p>
+                </section>
+
+                <!-- Skills -->
+                <section class="mb-5">
+                    <h2 class="section-title">Skills</h2>
+                    <div class="mb-3">
+                        <h6 class="fw-bold">Programming Languages</h6>
+                        <span class="badge badge-custom">Java</span>
+                        <span class="badge badge-custom">Python</span>
+                        <span class="badge badge-custom">C/C++</span>
+                        <span class="badge badge-custom">SQL</span>
+                        <span class="badge badge-custom">PL/SQL</span>
+                        <span class="badge badge-custom">PHP</span>
+                    </div>
+                    <div class="mb-3">
+                        <h6 class="fw-bold">Development Tools</h6>
+                        <span class="badge badge-custom">Git/GitHub</span>
+                        <span class="badge badge-custom">Canva</span>
+                        <span class="badge badge-custom">Figma</span>
+                        <span class="badge badge-custom">E/R Studio</span>
+                    </div>
+                    <div class="mb-3">
+                        <h6 class="fw-bold">Libraries/Frameworks</h6>
+                        <span class="badge badge-custom">Django</span>
+                        <span class="badge badge-custom">Yii</span>
+                        <span class="badge badge-custom">NumPy</span>
+                        <span class="badge badge-custom">Matplotlib</span>
+                        <span class="badge badge-custom">OpenCV</span>
+                        <span class="badge badge-custom">Dlib</span>
+                        <span class="badge badge-custom">Kivy</span>
+                    </div>
+                    <div class="mb-3">
+                        <h6 class="fw-bold">Languages</h6>
+                        <ul class="list-unstyled mb-0">
+                            <li><strong>Spanish:</strong> Native</li>
+                            <li><strong>English:</strong> Advanced</li>
+                            <li><strong>German:</strong> Basic</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Projects -->
+                <section class="mb-5">
+                    <h2 class="section-title">Projects</h2>
+                    <div class="card p-3">
+                        <h5 class="fw-bold text-green mb-1">Dental Clinic Database</h5>
+                        <p class="text-muted small mb-2">SQL, SQL*Plus, PL/SQL</p>
+                        <ul class="small mb-0">
+                            <li>Designed and implemented a relational database optimized for user requirements and minimal redundancy.</li>
+                            <li>Used E/R Studio and the extended Chen model to validate and review the design with users.</li>
+                            <li>Applied business rules using constraints and PL/SQL procedures.</li>
+                        </ul>
+                    </div>
+                    <div class="card p-3">
+                        <h5 class="fw-bold text-green mb-1">Game Theory Simulation</h5>
+                        <p class="text-muted small mb-2">C</p>
+                        <ul class="small mb-0">
+                            <li>Built a simulation of zero-sum games using game theory concepts.</li>
+                            <li>Developed a method to analyze rows and columns to evaluate player advantage.</li>
+                            <li>Demonstrated how any matrix could represent a solvable game under defined conditions.</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Right Column: Experience, Education, Tech, Schedule -->
+            <div class="col-lg-8">
+                
+                <!-- Experience -->
+                <section class="mb-5">
+                    <h2 class="section-title">Experience</h2>
+                    
+                    <div class="card p-4">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <h4 class="fw-bold text-green mb-0">Alcon</h4>
+                            <span class="badge bg-secondary">Aug 2025 -- Present</span>
+                        </div>
+                        <h6 class="fw-bold mb-2">DevSecOps Intern</h6>
+                        <p class="text-muted small mb-2">Python | Jira | Confluence | qTest | Saviynt | Vera | ServiceNow</p>
+                        <ul>
+                            <li>Worked to resolve tickets of various kinds in an environment of over 5000 users.</li>
+                            <li>Brought response and resolution time down, making the DevOps cycle run faster and better.</li>
+                            <li>Implemented optimizations to the processes making productivity rise across the team.</li>
+                        </ul>
+                    </div>
+
+                    <div class="card p-4">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <h4 class="fw-bold text-green mb-0">DocOffice</h4>
+                            <span class="badge bg-secondary">Dec 2024 -- Apr 2025</span>
+                        </div>
+                        <h6 class="fw-bold mb-2">Backend and QA Intern</h6>
+                        <p class="text-muted small mb-2">PHP | Yii</p>
+                        <ul>
+                            <li>Identified, reported, and documented issues and areas for improvement in the web application.</li>
+                            <li>Worked with databases and backend systems to solve client-reported issues.</li>
+                            <li>Communicated with end users to address concerns and follow up on issues.</li>
+                        </ul>
+                    </div>
+
+                    <div class="card p-4">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <h4 class="fw-bold text-green mb-0">Cibergestión</h4>
+                            <span class="badge bg-secondary">May 2024 -- Aug 2024</span>
+                        </div>
+                        <h6 class="fw-bold mb-2">Frontend Intern</h6>
+                        <p class="text-muted small mb-2">HTML | CSS | Python | Django</p>
+                        <ul>
+                            <li>Developed frontend components for a web application.</li>
+                            <li>Implemented AI tools for speech transcription and audio analysis.</li>
+                            <li>Participated in SCRUM ceremonies and agile development practices.</li>
+                        </ul>
+                    </div>
+
+                    <div class="card p-4">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <h4 class="fw-bold text-green mb-0">Competitive Programming Club (CPCFI)</h4>
+                            <span class="badge bg-secondary">Aug 2023 -- Dec 2023</span>
+                        </div>
+                        <h6 class="fw-bold mb-2">UNAM - Faculty of Engineering</h6>
+                        <ul>
+                            <li>Participated in various programming competitions as part of a diverse team.</li>
+                            <li>Developed algorithmic solutions in C++ under time constraints.</li>
+                            <li>Collaborated on problem-solving strategies in high-pressure environments.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Education -->
+                <section class="mb-5">
+                    <h2 class="section-title">Education</h2>
+                    <div class="card p-4 border-start border-4" style="border-color: var(--mygreen3) !important;">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <h5 class="fw-bold text-green mb-0">National Autonomous University of Mexico (UNAM)</h5>
+                            <span class="badge bg-secondary">Aug 2022 -- Expected Aug 2027</span>
+                        </div>
+                        <h6 class="mb-1">B.Sc. in Computer Engineering — Faculty of Engineering, Mexico City</h6>
+                        <p class="mb-2"><strong>GPA:</strong> 8.7/10</p>
+                        <p class="small mb-0"><strong>Relevant Courses:</strong> Data Structures and Algorithms, Object-Oriented Programming, Software Engineering, Databases.</p>
+                    </div>
+                </section>
+
+                <!-- Tech Concepts: IPv6 & SRv6 -->
+                <section class="mb-5">
+                    <h2 class="section-title">Networking Concepts: IPv6 & SRv6</h2>
+                    <div class="card p-4">
+                        <h5 class="fw-bold text-green">What is IPv6?</h5>
+                        <p>Internet Protocol version 6 (IPv6) is the most recent version of the communications protocol that provides an identification and location system for computers on networks and routes traffic across the Internet. Replacing IPv4, it uses 128-bit addresses, which solves the IP exhaustion problem and allows for a practically infinite number of unique IP addresses. It also provides improved routing, simplified network configuration, and enhanced built-in security features.</p>
+                        
+                        <h5 class="fw-bold text-green mt-3">What is SRv6?</h5>
+                        <p class="mb-0">Segment Routing over IPv6 (SRv6) is a modern network architecture that applies segment routing directly to the IPv6 data plane. Instead of relying on complex overlay protocols like MPLS, SRv6 embeds routing instructions (segments) directly inside the IPv6 packet headers. This enables advanced traffic engineering, network slicing, and simplified network programming by allowing a source node to dictate the exact path and functions a packet should undergo across the network fabric.</p>
+                    </div>
+                </section>
+
+                <!-- Interactive Schedule Table -->
+                <section class="mb-5">
+                    <h2 class="section-title">My Schedule</h2>
+                    <div class="card p-4 bg-white">
+                        <div class="table-responsive">
+                            <table class="table table-bordered schedule-table mb-0">
+                                <thead>
+                                    <tr>
+                                        <th class="time-col"></th>
+                                        <th>LUN</th>
+                                        <th>MAR</th>
+                                        <th>MIE</th>
+                                        <th>JUE</th>
+                                        <th>VIE</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- 7 AM -->
+                                    <tr>
+                                        <td class="time-col">7 AM</td>
+                                        <td rowspan="6"><div class="event-block h-100 bg-alcon"><span class="event-title">Trabajo Alcon</span><span class="event-time">7am - 1pm</span></div></td>
+                                        <td rowspan="4"><div class="event-block h-100 bg-alcon"><span class="event-title">Trabajo Alcon</span><span class="event-time">7am - 11am</span></div></td>
+                                        <td rowspan="6"><div class="event-block h-100 bg-alcon"><span class="event-title">Trabajo Alcon</span><span class="event-time">7am - 1pm</span></div></td>
+                                        <td rowspan="4"><div class="event-block h-100 bg-alcon"><span class="event-title">Trabajo Alcon</span><span class="event-time">7am - 11am</span></div></td>
+                                        <td rowspan="6"><div class="event-block h-100 bg-alcon"><span class="event-title">Trabajo Alcon</span><span class="event-time">7am - 1pm</span></div></td>
+                                    </tr>
+                                    <!-- 8 AM -->
+                                    <tr><td class="time-col">8 AM</td></tr>
+                                    <!-- 9 AM -->
+                                    <tr><td class="time-col">9 AM</td></tr>
+                                    <!-- 10 AM -->
+                                    <tr><td class="time-col">10 AM</td></tr>
+                                    <!-- 11 AM -->
+                                    <tr>
+                                        <td class="time-col">11 AM</td>
+                                        <td rowspan="2"><div class="event-block h-100 bg-grafica"><span class="event-title">Grafica B101</span><span class="event-time">11am - 1pm</span></div></td>
+                                        <td rowspan="2"><div class="event-block h-100 bg-grafica"><span class="event-title">Grafica B101</span><span class="event-time">11am - 1pm</span></div></td>
+                                    </tr>
+                                    <!-- 12 PM -->
+                                    <tr><td class="time-col">12 PM</td></tr>
+                                    <!-- 1 PM -->
+                                    <tr>
+                                        <td class="time-col">1 PM</td>
+                                        <td rowspan="2"><div class="event-block h-100 bg-micro"><span class="event-title">Lab Micro Q209</span><span class="event-time">1 - 3pm</span></div></td>
+                                        <td rowspan="2"><div class="event-block h-100 bg-negocios"><span class="event-title">Negocios elect B304</span><span class="event-time">1 - 3pm</span></div></td>
+                                        <td rowspan="2"></td> <!-- Wed Free -->
+                                        <td rowspan="2"><div class="event-block h-100 bg-negocios"><span class="event-title">Negocios elect B304</span><span class="event-time">1 - 3pm</span></div></td>
+                                        <td rowspan="8"></td> <!-- Fri Free -->
+                                    </tr>
+                                    <!-- 2 PM -->
+                                    <tr><td class="time-col">2 PM</td></tr>
+                                    <!-- 3 PM -->
+                                    <tr>
+                                        <td class="time-col">3 PM</td>
+                                        <td rowspan="2"><div class="event-block h-100 bg-micro"><span class="event-title">Micros B305</span><span class="event-time">3 - 4:30pm</span></div></td>
+                                        <td rowspan="2"><div class="event-block h-100 bg-tic"><span class="event-title">Admin. TIC Y002</span><span class="event-time">3 - 5pm</span></div></td>
+                                        <td rowspan="2"><div class="event-block h-100 bg-micro"><span class="event-title">Micros B305</span><span class="event-time">3 - 4:30pm</span></div></td>
+                                        <td rowspan="2"><div class="event-block h-100 bg-tic"><span class="event-title">Admin. TIC Y002</span><span class="event-time">3 - 5pm</span></div></td>
+                                    </tr>
+                                    <!-- 4 PM -->
+                                    <tr><td class="time-col">4 PM</td></tr>
+                                    <!-- 5 PM -->
+                                    <tr>
+                                        <td class="time-col">5 PM</td>
+                                        <td rowspan="2"><div class="event-block h-100 bg-internet"><span class="event-title">Admin. Internet D004</span><span class="event-time">5 - 7pm</span></div></td>
+                                        <td rowspan="2"></td> <!-- Tue Free -->
+                                        <td rowspan="2"><div class="event-block h-100 bg-internet"><span class="event-title">Admin. Internet D004</span><span class="event-time">5 - 7pm</span></div></td>
+                                        <td rowspan="2"><div class="event-block h-100 bg-grafica"><span class="event-title">Lab. Grafica Q219</span><span class="event-time">5 - 7pm</span></div></td>
+                                    </tr>
+                                    <!-- 6 PM -->
+                                    <tr><td class="time-col">6 PM</td></tr>
+                                    <!-- 7 PM -->
+                                    <tr>
+                                        <td class="time-col">7 PM</td>
+                                        <td rowspan="2"><div class="event-block h-100 bg-redes"><span class="event-title">Redes A306</span><span class="event-time">7 - 9pm</span></div></td>
+                                        <td rowspan="2"><div class="event-block h-100 bg-redes"><span class="event-title">Redes A306</span><span class="event-time">7 - 9pm</span></div></td>
+                                        <td rowspan="2"><div class="event-block h-100 bg-redes"><span class="event-title">Lab. Redes Seguras Q208</span><span class="event-time">7 - 9pm</span></div></td>
+                                        <td rowspan="2"><div class="event-block h-100 bg-redes"><span class="event-title">Redes A306</span><span class="event-time">7 - 9pm</span></div></td>
+                                    </tr>
+                                    <!-- 8 PM -->
+                                    <tr><td class="time-col">8 PM</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="header-bg text-center py-4 mt-4">
+        <div class="container">
+            <p class="mb-0">&copy; 2026 Emilio García Riba. Built with HTML5 & Bootstrap.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
